@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 {% block title %} Mascotitas {% endblock %}
 {% block content %}
-<h2 class="text-center">Mascotas</h2>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium impedit maiores necessitatibus
-    laudantium placeat, omnis commodi deserunt culpa ipsa quibusdam ea recusandae minus explicabo maxime, quo
-    vero iste eveniet reprehenderit. Amet recusandae, odio nesciunt, natus quo eos velit magni voluptas eum,
-    sequi adipisci voluptatum tempora sapiente. Sint, quam! Consequuntur ad suscipit veritatis quia magni ipsum
-    iusto officia excepturi, libero porro optio, iste reprehenderit at recusandae doloremque nostrum pariatur
-    consequatur aperiam eveniet? Eveniet dolor doloribus quas ipsam nam, dignissimos odit nulla eius impedit,
-    iusto iste voluptas! Maiores, iste qui doloremque incidunt, vitae quaerat ullam nobis, omnis animi
-    blanditiis quam odit cupiditate.</p>
+<h2 class="text-center">Mascotitas</h2>
+
+
+
+<ul class="list-group">
+    {% if mascotas %}
+    {% for mascota in mascotas %}
+    <a href="{% url 'detalle_mascota' mascota %}">{{ mascota }}</a>
+    {% endfor %}
+    {% else %}
+    <p class="list-group-item">No hay elemenetos para mostrar</p>
+    {% endif %}
+</ul>
 {% endblock %}
+
+<!-- {% url 'detalle_mascota' mascota %} -->

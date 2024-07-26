@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle de: {{ mascota }} {% endblock %}
+
+{% block content %}
+{% if mascota == 'Perrito' %}
+<h1>{{ mascota }}: Es un Perrito muy mordelon!</h1>
+{% elif mascota == 'Gatito' %}
+<h1>{{ mascota }}: Es un Gatito muy dormilon!</h1>
+{% elif mascota == 'Hamstercito' %}
+<h1>{{ mascota }}: Es un Hamstercito muy jugueton!</h1>
+{% else %}
+<h1>No hay mascota que mostrar</h1>
+{% endif %}
+<p><a href="{% url 'mascotas' %}">Volver a mascotas</a></p>
+{% endblock %}
