@@ -4,4 +4,14 @@
 }
 body {
   background-color: rgb(56, 56, 56);
+  color: aliceblue;
+}
+h1,
+h2,
+h3 {
+  color: aliceblue;
+}
+
+p {
+  color: aliceblue;
 }
